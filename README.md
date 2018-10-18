@@ -1,2 +1,2 @@
-# friendly-adventure
-python-adventure
+## python-adventure
+# Домашка 0
