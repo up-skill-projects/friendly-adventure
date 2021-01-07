@@ -1,7 +1,7 @@
 """Only for test lint."""
 
-def mul(a, b):
+def mul(first, second):
     """Test multiple function."""
-    return a * b
+    return first * second
 
 print(mul(3,4))
