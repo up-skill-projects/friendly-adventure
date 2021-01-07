@@ -4,4 +4,4 @@ def mul(first, second):
     """Test multiple function."""
     return first * second
 
-print(mul(3,4))
+print(mul(3, 4))
