@@ -1,8 +1,8 @@
-def calculate():
-    def nextInt():
+def Сalculate():
+    def next_Int():
         return int(input())
 
-    def getOperator():
+    def get_Operator():
         if token == "+":
             return lambda x, y: x + y
         if token == "-":
@@ -14,19 +14,19 @@ def calculate():
         raise ValueError(f"Wrong operator: {token}")
 
     stack = []
-    stack.append(nextInt())
-    stack.append(nextInt())
+    stack.append(next_Int())
+    stack.append(next_Int())
     while stack[1:]:
         token = input()
         result = None
         if token.isnumeric():
             result = int(token)
         elif token in ("+", "-", "*", "/",):
-            result = getOperator()(stack.pop(), stack.pop())
+            result = get_Operator()(stack.pop(), stack.pop())
         else:
             raise ValueError(f"Wrong token: {token}")
         stack.append(result)
     return stack.pop()
 
 
-print(calculate())
+print(Сalculate())
