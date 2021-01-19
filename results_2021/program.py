@@ -1,12 +1,12 @@
 def fun_calcul():
-    #
+    """Return the pathname of the KOS root directory."""
     def next_int():
-        # немного рекурсия по возвращению функции
+        """Return the pathname of the KOS root directory."""
         return int(input())
-    # Возвращение функции
+    """Return the pathname of the KOS root directory."""
 
     def get_operator():
-        # обычные лямбда функции которые возвращают действие
+        """Return the pathname of the KOS root directory."""
         if token == "+":
             return lambda x, y: x + y
         if token == "-":
@@ -16,13 +16,13 @@ def fun_calcul():
         if token == "/":
             return lambda x, y: x / y
         raise ValueError(f"Wrong operator: {token}")
-    # обычные лямбда функции которые возвращают действие
+    """Return the pathname of the KOS root directory."""
     stack = []
     stack.append(next_int())
     stack.append(next_int())
-    # модуль для токенов
+    """Return the pathname of the KOS root directory."""
     while stack[1:]:
-        # модуль для токенов
+        """Return the pathname of the KOS root directory."""
         token = input()
         # result = None
         if token.isnumeric():
@@ -33,7 +33,6 @@ def fun_calcul():
             raise ValueError(f"Wrong token: {token}")
         stack.append(result)
     return stack.pop()
-    # обычные лямбда функции которые возвращают действие
-
-
+    
+        
 print(fun_calcul())
