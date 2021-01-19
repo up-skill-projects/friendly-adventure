@@ -1,4 +1,4 @@
-def Calculator():
+def fun_calcul():
     def next_int():
         return int(input())
 
@@ -18,7 +18,7 @@ def Calculator():
     stack.append(next_int())
     while stack[1:]:
         token = input()
-        result = None
+        # result = None
         if token.isnumeric():
             result = int(token)
         elif token in ("+", "-", "*", "/",):
@@ -29,4 +29,5 @@ def Calculator():
     return stack.pop()
 
 
-print(Calculator())
+print(fun_calcul())
+
