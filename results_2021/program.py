@@ -1,8 +1,9 @@
+"""модуль"""
 def fun_calcul():
     """Return the pathname of the KOS root directory."""
     def next_int():
         return int(input())
-    """Return the pathname of the KOS root directory."""
+
     def get_operator():
         """Return the pathname of the KOS root directory."""
         if token == "+":
