@@ -1,4 +1,4 @@
-def Сalculate():
+def Calculator():
     def next_int():
         return int(input())
 
@@ -29,4 +29,4 @@ def Сalculate():
     return stack.pop()
 
 
-print(Сalculate())
+print(Calculator())
