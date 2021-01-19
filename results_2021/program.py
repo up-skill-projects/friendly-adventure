@@ -6,6 +6,7 @@ def fun_calcul():
 # Возвращение функции
 
     def get_operator():
+        # обычные лямбда функции которые возвращают действие
         if token == "+":
             return lambda x, y: x + y
         if token == "-":
@@ -19,7 +20,9 @@ def fun_calcul():
     stack = []
     stack.append(next_int())
     stack.append(next_int())
+    # модуль для токенов
     while stack[1:]:
+        # модуль для токенов
         token = input()
         # result = None
         if token.isnumeric():
@@ -29,8 +32,8 @@ def fun_calcul():
         else:
             raise ValueError(f"Wrong token: {token}")
         stack.append(result)
+    # обычные лямбда функции которые возвращают действие
     return stack.pop()
 
 
 print(fun_calcul())
-
