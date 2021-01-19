@@ -1,5 +1,7 @@
 act = input("Какое действие будем выполнять? ")
-strings = ''
+""" калькулятор обнуляющие биты """
+my_strings = ''
+two = 2
 if act == '^':
     number = int(input("введите число => "))
     second = int(input("В какую степень будем возводить? "))
@@ -8,12 +10,12 @@ elif act == '!':
     number = int(input("Введите число=> "))
     bits = int(input('число бит: '))
     while number > 0:
-        if bits and number % 2:
-            strings = '0' + strings
+        if bits and number % two:
+            my_strings = '0' + my_strings
             bits -= 1
         else:
-            strings = str(number % 2) + strings
-        number = number // 2
-    print("Результат=>", int(strings, 2))
+            my_strings = str(number % two) + my_strings
+        number = number // two
+    print("Результат=>", int(my_strings, two))
 else:
     print('Не верное действие!')
