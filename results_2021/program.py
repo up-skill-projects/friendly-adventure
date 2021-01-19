@@ -3,7 +3,7 @@ def fun_calcul():
     def next_int():
         # немного рекурсия по возвращению функции
         return int(input())
-# Возвращение функции
+    # Возвращение функции
 
     def get_operator():
         # обычные лямбда функции которые возвращают действие
@@ -16,7 +16,7 @@ def fun_calcul():
         if token == "/":
             return lambda x, y: x / y
         raise ValueError(f"Wrong operator: {token}")
-# обычные лямбда функции которые возвращают действие
+    # обычные лямбда функции которые возвращают действие
     stack = []
     stack.append(next_int())
     stack.append(next_int())
@@ -32,8 +32,8 @@ def fun_calcul():
         else:
             raise ValueError(f"Wrong token: {token}")
         stack.append(result)
-    # обычные лямбда функции которые возвращают действие
     return stack.pop()
+    # обычные лямбда функции которые возвращают действие
 
 
 print(fun_calcul())
