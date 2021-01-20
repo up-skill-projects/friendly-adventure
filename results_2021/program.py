@@ -6,7 +6,7 @@ def fun_calcul():
 
     def next_int():
         return int(input())
-    """функция"""
+
     def get_operator():
         """Return the pathname of the KOS root directory."""
         if token == "+":
