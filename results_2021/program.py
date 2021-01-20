@@ -6,6 +6,7 @@ def fun_calcul():
 
     def next_int():
         return int(input())
+    
     ''':cvar
     '''
     def get_operator():
