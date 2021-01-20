@@ -5,10 +5,9 @@ def fun_calcul():
     """Return the pathname of the KOS root directory."""
 
     def next_int():
-
         return int(input())
-
-    def get_operator():   
+    
+    def get_operator():
         """Return the pathname of the KOS root directory."""
         if token == "+":
             return lambda x, y: x + y
