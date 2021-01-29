@@ -1,8 +1,14 @@
-def Сalculate():
+"""модуль"""
+
+
+def fun_calcul():
+    """Return the pathname of the KOS root directory."""
+
     def next_int():
         return int(input())
 
     def get_operator():
+        """Return the pathname of the KOS root directory."""
         if token == "+":
             return lambda x, y: x + y
         if token == "-":
@@ -18,7 +24,7 @@ def Сalculate():
     stack.append(next_int())
     while stack[1:]:
         token = input()
-        result = None
+        # result = None
         if token.isnumeric():
             result = int(token)
         elif token in ("+", "-", "*", "/",):
@@ -29,4 +35,4 @@ def Сalculate():
     return stack.pop()
 
 
-print(Сalculate())
+print(fun_calcul())
