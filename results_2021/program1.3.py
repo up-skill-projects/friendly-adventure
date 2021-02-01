@@ -1,14 +1,14 @@
-"""функция расчета из обычного выражение в польское"""
+# функция расчета из обычного выражение в польское
 
 
-def rpn(s_kas):
+def rpn(s_kas):  # модуль
     lex = parse(s_kas)
     stack_1 = []
     operand = []
     opera = ["+", "-", "*", "/", "(", ")"]
     for ind in lex:
         if ind == "(":
-            stack_1 = [ind] + stack_1
+            stack_1 += [ind]
         elif ind in opera:
             if stack_1 == []:
                 stack_1 = [ind]
@@ -20,7 +20,7 @@ def rpn(s_kas):
                         break
                     operand += [q_fst]
             elif prty(stack_1[0]) < prty(ind):
-                stack_1 = [ind] + stack_1
+                stack_1 += [ind]
             else:
                 while True:
                     if stack_1 == []:
@@ -30,7 +30,7 @@ def rpn(s_kas):
                     stack_1 = stack_1[1:]
                     if prty(q_fst) == prty(ind):
                         break
-                stack_1 = [ind] + stack_1
+                stack_1 += [ind]
         else:
             operand += [ind]
     while stack_1 != []:
@@ -40,16 +40,16 @@ def rpn(s_kas):
     return operand
 
 
-def prty(o_sr):
+def prty(o_sr):  # модуль
     if o_sr == "+" or o_sr == "-":
         return 1
-    elif o_sr == "*" or o_sr == "/":
+    if o_sr == "*" or o_sr == "/":
         return 2
-    elif o_sr == "(":
+    if o_sr == "(":
         return 0
 
 
-def parse(s_kas):
+def parse(s_kas):   # модуль
     delims = ["+", "-", "*", "/", "(", ")"]
     lex = []
     tmp = ""
@@ -67,10 +67,7 @@ def parse(s_kas):
     return lex
 
 
-"""функция расчета из польского выражения в обычное выражение"""
-
-
-def funcc():
+def funcc():    # функция
     join = input("Введите Польское выражение").split()
     stack = []
     for i in join:
