@@ -3,6 +3,7 @@
 
 def rpn(s_kas):  # модуль
     lex = parse(s_kas)
+    global stack_1
     stack_1 = []
     operand = []
     opera = ["+", "-", "*", "/", "(", ")"]
@@ -49,7 +50,7 @@ def prty(o_sr):  # модуль
         return 0
 
 
-def parse(s_kas):   # модуль
+def parse(s_kas):
     delims = ["+", "-", "*", "/", "(", ")"]
     lex = []
     tmp = ""
@@ -67,18 +68,17 @@ def parse(s_kas):   # модуль
     return lex
 
 
-def funcc():    # функция
-    join = input("Введите Польское выражение").split()
-    stack = []
-    for i in join:
+def func():  # функция
+    indeed = input("Введите Польское выражение").split()
+    for i in indeed:
         if i.isdigit():
-            stack.append(i)
+            stack_1.append(i)
             continue
-        a_stack = stack.pop()
-        b_stack = stack.pop()
-        stack.append('({} {} {})'.format(b_stack, i, a_stack))
-    return stack[0]
+        d_stack = stack_1.pop()
+        r_stack = stack_1.pop()
+        stack_1.append('({} {} {})'.format(r_stack, i, d_stack))
+    return stack_1[0]
 
 
 print(rpn(input("Введите выражение")))
-print(funcc())
+print(func())
